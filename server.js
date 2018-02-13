@@ -1,5 +1,10 @@
 var express = require('express');
 var app = express();
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://stangricki:password-1@ds229388.mlab.com:29388/database-1', {
+    useMongoClient: true
+});
 
 var port = process.env.PORT || 5000;
 
